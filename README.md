@@ -1,12 +1,11 @@
-# NTIRE 2024: Light Field Image Super-Resolution Challenge <br> 
+# NTIRE 2025: Light Field Image Super-Resolution Challenge <br> 
 <p align="center">  <img src="https://raw.github.com/The-Learning-And-Vision-Atelier-LAVA/LF-Image-SR/NTIRE2024/Fig/logo.jpg" width="400"> </p>
 
-**Light field (LF) image super-resolution (SR) challenge is held as a part of the [NTIRE workshop](https://cvlai.net/ntire/2024/) in conjunction with CVPR 2024. The goal of this challenge is to develop methods to enhance the spatial resolution of LF images.**
+**Light field (LF) image super-resolution (SR) challenge is held as a part of the [NTIRE workshop](https://cvlai.net/ntire/2025/) in conjunction with CVPR 2025. The goal of this challenge is to develop methods to enhance the spatial resolution of LF images.**
 
 
 ## News and Updates:
-* **2024-01-30**: Codalab servers for [Track1](https://codalab.lisn.upsaclay.fr/competitions/17265) and [Track2](https://codalab.lisn.upsaclay.fr/competitions/17266) are online. Training and validation data is released.
-<br><br>
+
 
 ## Introduction
 With recent advances in camera manufacturing, light field (LF) imaging technology becomes increasingly popular and is commonly used in various applications such as mobile phones, biological microscope, VR/AR etc. Since both intensity and directions of light rays are recorded by LF cameras, the resolution of LF images can be enhanced by using these additional angular information. LF image super-resolution (SR), also known as LF spatial SR, aims at reconstructing high-resolution (HR) LF images from their low-resolution (LR) counterparts. 
@@ -25,7 +24,7 @@ During the test phase, the test set will be released, which includes LR LF image
 ## Datasets
 ### Training Set: *[[Baidu Drive](https://pan.baidu.com/s/1AyMJUSwwDf9T7Tr8xhs1nw) (key:lfsr) or [OneDrive](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/zyliang_stu_xidian_edu_cn/EhRHBLf4oY1Fl7EyVMm4OKsBM17csVsuCMGXSVxSUPLiIg?e=x3of9A)]*
 
-This challenge follows the training set in the paper [DistgSSR](https://yingqianwang.github.io/DistgLF/), and uses the EPFL, HCInew, HCIold, INRIA and STFgantry datasets which totally consist of 144 scenes for training. All the LF images in the training set have an angular resolution of 9x9. The participants can use these HR LF images as groundtruths, and use the [BasicLFSR toolbox](https://github.com/ZhengyuLiang24/BasicLFSR) to train their models. **External training data or pretrained models are NOT allowed in this challenge.**
+This challenge follows the training set in the paper [DistgSSR](https://yingqianwang.github.io/DistgLF/), and uses the EPFL, HCInew, HCIold, INRIA and STFgantry datasets which totally consist of 144 scenes for training. All the LF images in the training set have an angular resolution of 9x9. The participants can use these HR LF images as groundtruths, and use the [BasicLFSR toolbox](https://github.com/ZhengyuLiang24/BasicLFSR) to train their models. 
 
 ### Validation Set: *[[Baidu Drive](https://pan.baidu.com/s/1n6TPP7EJlkKPMn-0DkN10g) (key:lfsr) or [OneDrive](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/zyliang_stu_xidian_edu_cn/Es3gi3N9XuVPpm8a9pysMGcB2-Pxenr5zo0WZXRaz_SaaA?e=1I840e)]*
 
@@ -45,11 +44,13 @@ We evaluate the submitted results by comparing them with the ground truth LF ima
 ## Tracks (NEW):
 There are two tracks in this challenge. Both tracks adopt the bicubic downsampling approach to generate LR LF images.
 
-### Track 1: [Fidelity Only](https://codalab.lisn.upsaclay.fr/competitions/17265)
-This track aims to encourage participants to explore the precision upper bound of LF image SR. In this track, their is no efficiency limitation (e.g., the parameter amount or computational cost) of the developed models. The rankings are determined by the average PSNR value on the test set only. 
+### Track 1: [Traditional]()
+This track aims to encourage participants to explore the precision upper bound of LF image SR with the given standard training data. In this track, their is no efficiency limitation (e.g., the parameter amount or computational cost) of the developed models. The rankings are determined by the average PSNR value on the test set only. **External training data or pretrained models are NOT allowed in this track.**
 
-### Track 2: [Fidelity & Efficiency](https://codalab.lisn.upsaclay.fr/competitions/17266)
+### Track 2: [Efficiency]()
 In this track, we aspire to highlight an under-investigated issue of efficient inference in LF image SR, and hope the participants to develop LF image SR methods that can achieve high computational efficiency without compromising the SR quality. Note that, in this track, the model size (i.e., number of parameters) is restricted to 1 MB, and the FLOPs computed using the fvcore library is restricted to 20 G (with an input LF of size 5×5×32×32). The computational cost of Test-Time Augmentation (TTA) operations will be counted to the final FLOPs. Models that do not meet the efficiency requirement will not be included for the ranking. After the submission of the fact sheet and code, we will also assess the inference time of each model as an additional metric in the final challenge report. The rankings are determined by the average PSNR value on the test set only. 
+
+### Track 3: [Large Model with Unconstraint Training Data]()
 
 
 ## Baseline Models:
@@ -68,14 +69,14 @@ We use CodaLab for online submission in the development phase. **Here, we provid
 <br><br>
 
 ## Important Dates
-* 2024-01-30: Release of train data (input and output) and validation data (inputs only)
-* 2024-01-31: Validation server online
-* 2024-03-14: Final test data release (inputs only)
-* 2024-03-21: Test output results submission deadline
-* 2024-03-21: Fact sheets and code/executable submission deadline
-* 2024-03-22: Preliminary test results release to the participants
-* 2024-03-31: Paper submission deadline for entries from the challenge
-* 2024-06-18 (TBU): NTIRE workshop and challenges, results and award ceremony (CVPR 2024, Seattle)
+* 2025-01-10: Release of train data (input and output) and validation data (inputs only)
+* 2025-01-31: Validation server online
+* 2025-03-14: Final test data release (inputs only)
+* 2025-03-21: Test output results submission deadline
+* 2025-03-21: Fact sheets and code/executable submission deadline
+* 2025-03-24: Preliminary test results release to the participants
+* 2025-03-31: Paper submission deadline for entries from the challenge
+* 2025-06-18 (TBU): NTIRE workshop and challenges, results and award ceremony (CVPR 2024, Seattle)
 <br><br>
 
 ## Group number policy
@@ -97,7 +98,7 @@ You can also join our WeChat group by scanning the code below:
 * [**Yulan Guo**](http://yulanguo.cn/) ([yulan.guo@nudt.edu.cn](yulan.guo@nudt.edu.cn))
 <br><br>
 
-## NTIRE 2024 Terms and Conditions:
-The terms and conditions of this challenge can be viewed [here](https://codalab.lisn.upsaclay.fr/competitions/17265#learn_the_details-terms_and_conditions).
+## NTIRE 2025 Terms and Conditions:
+The terms and conditions of this challenge can be viewed [here]().
  
 <br>
